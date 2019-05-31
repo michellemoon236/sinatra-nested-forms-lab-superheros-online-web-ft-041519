@@ -8,5 +8,8 @@ class App < Sinatra::Base
     
   end
   
-  go '/'
+  go '/teams' do
+    
+  end
+  
 end
