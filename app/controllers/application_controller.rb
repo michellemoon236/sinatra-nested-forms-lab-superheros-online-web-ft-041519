@@ -4,11 +4,11 @@ class App < Sinatra::Base
 
   set :views, Proc.new { File.join(root, "../views/") }
 
-  go '/' do
+  get '/' do
     erb :form
   end
   
-  go '/teams' do
+  post '/teams' do
     @team = Team.new(params[team])
     
     params[team][heroes].each do |hero_details|
